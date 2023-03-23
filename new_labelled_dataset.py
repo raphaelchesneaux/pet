@@ -52,7 +52,7 @@ def main(n_set=1, N=16) :
         d = os.path.join(fewglue_path, file)
         if os.path.isdir(d) :
 
-            dataset_name = str(d).split('\\')[-1]
+            dataset_name = str(d).split('/')[-1]
             print(dataset_name)
 
             # We discard AX-b and AX-g datasets
