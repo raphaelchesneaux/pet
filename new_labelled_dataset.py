@@ -48,8 +48,8 @@ def main(n_set=1, N=16) :
     fewglue_path = './data/fewglue'
 
     
-    for file in os.listdir(superglue_path) :
-        d = os.path.join(superglue_path, file)
+    for file in os.listdir(fewglue_path) :
+        d = os.path.join(fewglue_path, file)
         if os.path.isdir(d) :
 
             dataset_name = str(d).split('\\')[-1]
@@ -75,7 +75,7 @@ def main(n_set=1, N=16) :
 
                     # Create train.jsonl by extracting N random examples from initial
                     # train.jsonl file in original superGLUE dataset
-                    original_training_set = f"{superglue_path}/{dataset_name}/train.jsonl"
+                    original_training_set = f"{fewglue_path}/{dataset_name}/train.jsonl"
                     new_training_set = f"{fewglue_path}/{dataset_name}/{dataset_name}_{i+1}/train.jsonl"
                     extract_datapoints(input_path=original_training_set,
                                        output_path=new_training_set,
