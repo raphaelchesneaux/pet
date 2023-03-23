@@ -53,6 +53,7 @@ def main(n_set=1, N=16) :
         if os.path.isdir(d) :
 
             dataset_name = str(d).split('\\')[-1]
+            print(dataset_name)
 
             # We discard AX-b and AX-g datasets
             if dataset_name[0] != 'A' :
