@@ -33,7 +33,7 @@ def extract_datapoints(input_path, output_path, N) :
     return
 
 
-def main(n_set=1, N=16) :
+def main(n_set=1, N=8) :
     """
     For each task :
     1. Create n_set subfolders of task dataset named "{task}_{k}" 
